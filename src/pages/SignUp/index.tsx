@@ -10,14 +10,7 @@ import { Link } from 'react-router-dom';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-import {
-  Container,
-  Content,
-  Field,
-  AnimationContainer,
-  FootballArea,
-  Midfield,
-} from './styles';
+import { Container, Content, AnimationContainer } from './styles';
 
 interface SignUpData {
   name: string;
@@ -30,11 +23,6 @@ const SignUp: React.FC = () => {
 
   return (
     <Container>
-      <Field>
-        <FootballArea />
-        <Midfield />
-        <FootballArea />
-      </Field>
       <Content>
         <AnimationContainer>
           <Form ref={formRef} onSubmit={() => {}}>

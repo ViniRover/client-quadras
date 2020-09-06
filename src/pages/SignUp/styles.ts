@@ -5,27 +5,17 @@ export const Container = styled.div`
   height: 100vh;
 
   display: flex;
-  align-items: stretch;
-`;
-
-export const Field = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-
-  height: 100%;
-  width: 100%;
+  justify-content: center;
 `;
 
-const appearFromBack = keyframes`
+const appearFromLeft = keyframes`
   from {
     opacity: 0;
-    transform: translateY(0);
+    transform: translateX(-20%);
   }to {
     opacity: 1;
-    transform: translateZ(100%);
+    transform: translateX(0);
   }
 `;
 
@@ -34,8 +24,9 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 50%;
+  border-radius: 20px;
+  width: 800px;
+  height: 600px;
 
   background: #fff;
 `;
@@ -50,7 +41,7 @@ export const AnimationContainer = styled.div`
   border-radius: 20px;
   padding: 0 30px 30px 30px;
 
-  animation: ${appearFromBack} 2s;
+  animation: ${appearFromLeft} 2s;
 
   form {
     margin: 80px 0;
@@ -77,7 +68,7 @@ export const AnimationContainer = styled.div`
   > a {
     color: #002a13;
     display: block;
-    margin-top: 24px;
+    margin-bottom: 34px;
     text-decoration: none;
     transition: color 0.2s;
 
@@ -92,19 +83,4 @@ export const AnimationContainer = styled.div`
       color: ${shade(0.2, '#09c734')};
     }
   }
-`;
-
-export const FootballArea = styled.div`
-  display: flex;
-
-  width: 400px;
-  height: 100px;
-  border: 2px solid #fff;
-`;
-
-export const Midfield = styled.div`
-  display: flex;
-
-  width: 100%;
-  border: 2px solid #fff;
 `;

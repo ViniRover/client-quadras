@@ -11,6 +11,7 @@ export const Container = styled.div<ContainerProps>`
   border-radius: 10px;
   padding: 16px;
   width: 100%;
+  transition: 0.5s;
 
   border: 2px solid #232129;
   color: #666360;
@@ -31,14 +32,15 @@ export const Container = styled.div<ContainerProps>`
   ${props =>
     props.isFocused &&
     css`
-      color: #ff9000;
-      border-color: #ff9000;
+      color: #09c734;
+      border-color: #09c734;
     `}
 
   ${props =>
     props.isFilled &&
     css`
-      color: #ff9000;
+      color: #09c734;
+      border-color: #09c734;
     `}
 
   input {
